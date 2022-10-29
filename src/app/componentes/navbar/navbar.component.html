@@ -1,1 +1,46 @@
-<p>navbar works!</p>
+<!--Navbar section-->
+<nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Telúrbicos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--OffCanvas-->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="Barra de navegación lateral">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Telúrbicos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                </div>
+                <div class="offcanvas-body">                        
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house-door fs-4 me-1"></i>Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-brush fs-4 me-1"></i>Murales
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-brush fs-4 me-1"></i>Telúrbicos</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-person fs-4 me-1"></i>Homenajes</a></li>
+                                <!--<li><hr class="dropdown-divider"></li>-->
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-tree fs-4 me-1"></i>Otros</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-geo-alt-fill fs-4 me-1"></i>Mapa</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-phone fs-4 me-1"></i>Prensa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-person fs-4 me-1"></i>Nosotres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="bi bi-envelope fs-4 me-1"></i>Contacto</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            
+            </div>
+        </div>
+    </nav>
