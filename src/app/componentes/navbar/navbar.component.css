@@ -1,7 +1,21 @@
+/*NAVBAR*/
+
+.nav-item {
+  margin-right: 1rem;
+}
+
+.nav-item i {
+  margin-right: 0.5rem;
+}
+
 /*NAVBAR OFFCANVAS*/
 
 @media (max-width: 575.98px) { 
     #offcanvasNavbar {
       width: 75%;
+    }
+    /*para alinear iconos en offcanvasNavbar*/
+    .nav-item i { 
+      width: 30px;
     }
   }
