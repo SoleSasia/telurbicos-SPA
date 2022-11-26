@@ -13,16 +13,17 @@
                 <button type="button" data-bs-target="#heroCarouselExample" data-bs-slide-to="4" aria-label="Slide 5"></button>                    
             </div>
 
-            <div class="carousel-inner">
-                    <div class="carousel-item active" [ngStyle]="{'background-image':'url(' + bgImage + ')'}">
+            <div *ngFor="let slide of slidesHero; let i=index" class="carousel-inner">
+
+                    <div class="carousel-item" [ngClass]="(i === 0) ? 'active' : ''" [ngStyle]="{'background-image':'url(' + slide.img + ')'}">
                         
                         <div class="container-fluid d-md-block">
                                 <div class="row align-items-center">
                                     <div class="col col-md-8 col-lg-7 col-xl-6">
                                         
                                         <div class="carousel-caption p-4 mb-5 d-block">
-                                            <h2 class="fw-bolder text-capitalize mb-3">{{titleTelurbicos}}</h2>
-                                            <p>{{textTelurbicos}}</p>
+                                            <h2 class="fw-bolder text-capitalize mb-3">{{slide.title}}</h2>
+                                            <p>{{slide.description}}</p>
                                             <button class="btn btn-primary">Ver más</button>
                                         </div>
                                     </div>
