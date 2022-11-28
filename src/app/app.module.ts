@@ -7,6 +7,7 @@ import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { HeroCarouselComponent } from './componentes/hero-carousel/hero-carousel.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { TelurbicosComponent } from './componentes/telurbicos/telurbicos.component';
+import { HomeComponent } from './componentes/home/home.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TelurbicosComponent } from './componentes/telurbicos/telurbicos.compone
     NavbarComponent,
     HeroCarouselComponent,
     FooterComponent,
-    TelurbicosComponent
+    TelurbicosComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
