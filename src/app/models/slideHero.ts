@@ -1,4 +1,5 @@
 export class SlideHero {
+    
     id: number;
     img: string;
     title: string;

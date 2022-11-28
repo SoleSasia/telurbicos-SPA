@@ -9,12 +9,13 @@ import { SlideHero } from 'src/app/models/slideHero';
 
 export class HeroCarouselComponent implements OnInit {
 
-  //bg una imagen (prueba)
+  /*//bg una imagen (prueba)
   titleTelurbicos:string = "Murales telúrbicos";
   textTelurbicos:string = "Aquí podrás encontar todo nuestro trabajo telúrbico.";
-  bgImage:string = "./assets/bg-telurbicos.jpg";
+  bgImage:string = "./assets/bg-telurbicos.jpg";*/
 
-  //bg carousel arreglo de objetos
+  //bg-image0-carousel: arreglo de objetos 
+  //TODO: crear service + JSON
   
   slidesHero: SlideHero[] = [
     {
@@ -53,12 +54,6 @@ export class HeroCarouselComponent implements OnInit {
       link: ""
     }
   ];
-
-
-    
- // "./assets/bg-homenajes.jpg", "./assets/bg-otros.jpg"];
-
-
 
   constructor() { }
 
