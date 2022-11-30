@@ -1,5 +1,125 @@
-<app-navbar></app-navbar>
+<!--Home section-->
+<main class="d-flex align-items-center justify-content-center">
 
-<app-hero-carousel></app-hero-carousel>
+    <div class="container-fluid p-0">
+    
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-keyboard="true">
 
-<app-footer></app-footer>
+            <div class="carousel-indicators mb-4">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button> 
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>                    
+            </div>
+
+            <div *ngFor="let slide of slidesHero; let i=index" class="carousel-inner">
+
+                    <div class="carousel-item" [ngClass]="(i === 0) ? 'active' : ''" [ngStyle]="{'background-image':'url(' + slide.img + ')'}">
+                        
+                        <div class="container-fluid d-md-block">
+                            <div class="row align-items-center">
+                                <div class="col col-md-8 col-lg-7 col-xl-6">
+                                    <div class="carousel-caption p-4 mb-5 d-block">
+                                        <h2 class="fw-bolder text-capitalize mb-3">{{slide.title}}</h2>
+                                        <p>{{slide.description}}</p>
+                                        <button class="btn btn-primary">Ver más</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+            <!-- CÓDIGO DE SITIO EN CONSTRUCCIÓN
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000" style="background-image:url(./assets/bg-construccion.jpg)">
+                    <div class="container-fluid h-100 d-md-block">
+                        <div class="row align-items-center h-100">
+                            <div class="col-12 col-md-8 col-lg-7 col-xl-6">
+                                
+                                <div class="carousel-caption p-4 mb-5 d-block">
+                                    <h2 class="fw-bolder text-capitalize mb-3">Epa! Nos agarraste trabajando...</h2>
+                                    <p>Estamos reformando este sitio, y en breve estará listo.</p>
+                                    <p>Mientras, podés seguirnos en nuestras redes:</p>
+                                    
+                                    <!--Social media Links
+                                    <div class="row d-flex justify-content-center align-items-center">
+                                        <a class="col-8 col-sm-6 col-md-4 m-2 btn btn-primary" href="https://www.instagram.com/sasialibre/" role="button" target="_blank">
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <i class="bi bi-instagram pe-1"></i>
+                                                <small>sasialibre</small>
+                                            </div>
+                                        </a>
+                                        
+                                        <a class="col-8 col-sm-6 col-md-4 m-2 btn btn-primary" href="https://www.instagram.com/geouravasi/" role="button" target="_blank">
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <i class="bi bi-instagram pe-1"></i>
+                                                <small>geouravasi</small>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item telurbicos">
+                    <div class="container-fluid h-100 d-md-block">
+                        <div class="row align-items-center h-100">
+                            <div class="col col-md-8 col-lg-7 col-xl-6">
+                                
+                                <div class="carousel-caption p-4 mb-5 d-block">
+                                    <h2 class="fw-bolder text-capitalize mb-3">Murales telúrbicos</h2>
+                                    <p>Aquí podrás encontar todo nuestro trabajo telúrbico.</p>
+                                    <!--<button class="btn btn-primary">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item homenajes">
+                    <div class="container-fluid h-100 d-md-block">
+                        <div class="row align-items-center h-100">
+                            <div class="col-12 col-md-8 col-lg-7 col-xl-6">
+                                <div class="carousel-caption p-4 mb-5 d-block">
+                                    <h2 class="fw-bolder text-capitalize mb-3">Homenajes</h2>
+                                    <p>Aquí podrás acceder a los murales donde hemos homenajeado a alguien.</p>
+                                    <!--<button class="btn btn-primary">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item otros">
+                    <div class="container-fluid h-100 d-md-block">
+                        <div class="row align-items-center h-100">
+                            <div class="col-12 col-md-8 col-lg-7 col-xl-6">
+                                <div class="carousel-caption p-4 mb-5 d-block">
+                                    <h2 class="fw-bolder text-capitalize mb-3">Otros</h2>
+                                    <p>Y aquí podrás encontrar murales sobre temáticas diversas.</p>
+                                    <!--<button class="btn btn-primary">Ver más</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                -->
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </div>
+    
+</main>
