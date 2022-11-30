@@ -1,20 +1,7 @@
-/*HERO CAROUSEL*/
+/*HERO CAROUSEL - Full Screen Mobile*/
 
-/*#heroCarousel .carousel-item.telurbicos {
-    background-image: url("../../../assets/bg-telurbicos.jpg");
-}
-
-#heroCarousel .carousel-item.homenajes {
-    background-image: url("../../../assets/bg-homenajes.jpg");
-}
-
-#heroCarousel .carousel-item.otros {
-    background-image: url("../../../assets/bg-otros.jpg");
-}*/
-
-/*Full Screen Mobile*/
 #heroCarousel .carousel-item {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     min-height: 350px;
     background: no-repeat center center scroll;
