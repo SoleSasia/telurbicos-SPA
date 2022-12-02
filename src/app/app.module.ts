@@ -8,6 +8,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { TelurbicosComponent } from './componentes/telurbicos/telurbicos.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { HomenajesComponent } from './componentes/homenajes/homenajes.component';
+import { OtrosComponent } from './componentes/otros/otros.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomenajesComponent } from './componentes/homenajes/homenajes.component'
     FooterComponent,
     TelurbicosComponent,
     HomeComponent,
-    HomenajesComponent
+    HomenajesComponent,
+    OtrosComponent
   ],
   imports: [
     BrowserModule,
