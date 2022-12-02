@@ -5,6 +5,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <!--OffCanvas-->
         <div class="offcanvas offcanvas-start bg-light" tabindex="-1" id="offcanvasNavbar" aria-labelledby="Barra de navegación lateral">
             <div class="offcanvas-header">
@@ -27,7 +28,11 @@
                                     <i class="fa-solid fa-brush fs-4"></i><span>Telúrbicos</span>
                                 </a>
                             </li>
-                            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user fs-4"></i><span>Homenajes</span></a></li>
+                            <li>
+                                <a class="dropdown-item" routerLink="/m-homenajes" routerLinkActive="active" ariaCurrentWhenActive="page">
+                                    <i class="fa-solid fa-user fs-4"></i><span>Homenajes</span>
+                                </a>
+                            </li>
                             <!--<li><hr class="dropdown-divider"></li>-->
                             <li><a class="dropdown-item" href="#"><i class="fa-solid fa-paintbrush fs-4"></i><span>Otros</span></a></li>
                             <li><a class="dropdown-item" href="#"><i class="fa-solid fa-location-dot fs-4"></i><span>Mapa</span></a></li>
