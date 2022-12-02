@@ -27,7 +27,7 @@ export class TelurbicosComponent implements OnInit {
       imgs: ["./assets/bg-otros.jpg","./assets/bg-homenajes.jpg","./assets/bg-otros.jpg"],
       description: "mural copado",
       data: "diciembre 2021",
-      location: "",
+      location: "...",
       tipoMural: "telurbicos"
     }
   ];
