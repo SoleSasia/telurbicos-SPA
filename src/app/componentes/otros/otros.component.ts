@@ -2,15 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Mural } from 'src/app/models/mural';
 
 @Component({
-  selector: 'app-telurbicos',
-  templateUrl: './telurbicos.component.html',
-  styleUrls: ['./telurbicos.component.css']
+  selector: 'app-otros',
+  templateUrl: './otros.component.html',
+  styleUrls: ['./otros.component.css']
 })
-
-export class TelurbicosComponent implements OnInit {
+export class OtrosComponent implements OnInit {
 
   //TODO: crear servicio JSON
-  muralesTelurbicos: Mural[] = [
+  muralesOtros: Mural[] = [
     {
       id: 1,
       idName: "DestrezaWaxa",
