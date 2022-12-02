@@ -9,6 +9,7 @@ import { Mural } from 'src/app/models/mural';
 
 export class TelurbicosComponent implements OnInit {
 
+  //TODO: crear servicio JSON
   muralesTelurbicos: Mural[] = [
     {
       id: 1,
