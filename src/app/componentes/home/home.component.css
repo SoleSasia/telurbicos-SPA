@@ -1,0 +1,16 @@
+/*HERO CAROUSEL - Full Screen Mobile*/
+
+#heroCarousel .carousel-item {
+    height: 90vh;
+    width: 100%;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+
+#heroCarousel .carousel-item .carousel-caption{
+    background:rgba(0,0,0,0.6);
+    border-radius: 0.25rem;
+    animation-duration: 1s;
+    animation-delay: 2s;
+  }
