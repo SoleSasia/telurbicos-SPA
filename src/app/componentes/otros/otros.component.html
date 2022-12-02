@@ -1,1 +1,46 @@
-<p>otros works!</p>
+<!--Murales_otros section-->
+<section>
+    <div class="container-fluid bg-light p-2">
+  
+      <h2 class="text-center m-3">Murales diverses</h2>
+      
+      <div *ngFor="let mural of muralesOtros" class="container-fluid py-3">
+    
+        <!--attribute binding en id & data-bs-target resuelve el uso de múltiples carruseles en single page
+            data-bs-ride=false evita desplazamiento automático-->
+        <div [attr.id]="mural.idName" class="carousel slide" data-bs-ride="false" data-bs-keyboard="true">
+            
+          <div class="carousel-indicators">
+            <button type="button" [attr.data-bs-target]="'#'+mural.idName" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" [attr.data-bs-target]="'#'+mural.idName" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" [attr.data-bs-target]="'#'+mural.idName" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+      
+          <div  class="carousel-inner">
+            <div *ngFor="let img of mural.imgs, let i=index">
+              <div class="carousel-item" [ngClass]="(i === 0) ? 'active' : ''">
+                <img [src]="img" class="d-block w-100" [attr.alt]="mural.title">
+              </div>
+            </div>
+      
+            <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#'+mural.idName" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#'+mural.idName" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+      
+          </div>
+        </div>
+  
+        <h6 class="py-1">{{mural.title}}</h6>
+        <p>{{mural.description}}<br>
+        {{mural.location}}<br>
+        <small><em>{{mural.data}}</em></small></p>
+  
+      </div>
+    </div>
+    
+  </section>
