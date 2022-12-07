@@ -1,0 +1,9 @@
+/*MAPA BG - Full Screen Mobile*/
+
+#bgMapa {
+    height: 90vh;
+    width: 100%;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}

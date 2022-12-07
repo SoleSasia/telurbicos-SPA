@@ -9,6 +9,7 @@ import { TelurbicosComponent } from './componentes/telurbicos/telurbicos.compone
 import { HomeComponent } from './componentes/home/home.component';
 import { HomenajesComponent } from './componentes/homenajes/homenajes.component';
 import { OtrosComponent } from './componentes/otros/otros.component';
+import { MapaComponent } from './componentes/mapa/mapa.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { OtrosComponent } from './componentes/otros/otros.component';
     TelurbicosComponent,
     HomeComponent,
     HomenajesComponent,
-    OtrosComponent
+    OtrosComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
