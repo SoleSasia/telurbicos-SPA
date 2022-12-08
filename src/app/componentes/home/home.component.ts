@@ -29,28 +29,28 @@ export class HomeComponent implements OnInit {
       img: "./assets/bg-telurbicos.jpg",
       title: "Murales telúrbicos",
       description: "Aquí podrás encontar todo nuestro trabajo telúrbico.",
-      link: ""
+      link: "/m-telurbicos"
     },
     {
       id: 3,
       img: "./assets/bg-homenajes.jpg",
       title: "Homenajes",
       description: "Aquí podrás acceder a los murales donde hemos homenajeado a alguien.",
-      link: ""
+      link: "/m-homenajes"
     },
     {
       id: 4,
       img: "./assets/bg-otros.jpg",
       title: "Otros murales",
       description: "Aquí podrás encontrar murales sobre temáticas diversas.",
-      link: ""
+      link: "/m-otros"
     },
     {
       id: 5,
       img: "./assets/bg-telurbicos.jpg",
       title: "Nosotres",
       description: "Y aquí te contamos un poco de nosotres y nuestro trabajo.",
-      link: ""
+      link: "m-nosotres"
     }
   ];
 
