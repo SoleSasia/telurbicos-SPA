@@ -23,7 +23,7 @@
                                 <div class="carousel-caption p-4 mb-5 d-block">
                                     <h2 class="fw-bolder text-capitalize mb-3">{{slide.title}}</h2>
                                     <p>{{slide.description}}</p>
-                                    <button class="btn btn-primary" [routerLink]="slide.link" routerLinkActive="active">Ver más</button>
+                                    <button *ngIf="slide.id != 1" class="btn btn-primary" [routerLink]="slide.link" routerLinkActive="active">Ver más</button>
                                 </div>
                             </div>
                         </div>
