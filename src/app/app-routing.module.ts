@@ -7,6 +7,7 @@ import { HomeComponent } from './componentes/home/home.component';
 import { HomenajesComponent } from './componentes/homenajes/homenajes.component';
 import { OtrosComponent } from './componentes/otros/otros.component';
 import { MapaComponent } from './componentes/mapa/mapa.component';
+import { NosotresComponent } from './componentes/nosotres/nosotres.component';
 
 //defino rutas
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'm-homenajes', component: HomenajesComponent},
   {path: 'm-otros', component: OtrosComponent},
   {path: 'm-mapa', component: MapaComponent},
+  {path: 'm-nosotres', component: NosotresComponent},
   {path: '', component: HomeComponent},
 ];
 

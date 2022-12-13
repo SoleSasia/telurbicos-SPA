@@ -10,6 +10,7 @@ import { HomeComponent } from './componentes/home/home.component';
 import { HomenajesComponent } from './componentes/homenajes/homenajes.component';
 import { OtrosComponent } from './componentes/otros/otros.component';
 import { MapaComponent } from './componentes/mapa/mapa.component';
+import { NosotresComponent } from './componentes/nosotres/nosotres.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MapaComponent } from './componentes/mapa/mapa.component';
     HomeComponent,
     HomenajesComponent,
     OtrosComponent,
-    MapaComponent
+    MapaComponent,
+    NosotresComponent
   ],
   imports: [
     BrowserModule,
