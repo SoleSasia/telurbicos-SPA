@@ -1,0 +1,8 @@
+/*NOSOTRES BG - Full Screen Mobile*/
+
+#bgNosotres {
+    height: 90vh;
+    width: 100%;
+    min-height: 350px;
+    background-color: red;
+}
