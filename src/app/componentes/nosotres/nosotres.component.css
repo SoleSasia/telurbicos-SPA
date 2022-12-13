@@ -4,5 +4,22 @@
     height: 90vh;
     width: 100%;
     min-height: 350px;
-    background-color: red;
+}
+
+#fotoPerfil {
+    border-radius: 50%;
+    border-color: slategrey;
+    border-style: solid;
+}
+
+
+@media (max-width: 575.98px){
+    .description-profile {
+        text-align: center;
+    }
+}
+
+
+.media-item {
+    font-size: 2rem;
 }
