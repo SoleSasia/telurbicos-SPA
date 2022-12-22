@@ -1,6 +1,6 @@
-export class Mural {
+export interface Mural {
     
-    id: number;
+    _id: number;
     idName: string;
     title: string;
     imgs: string[] ;
@@ -9,6 +9,7 @@ export class Mural {
     location: string;//link to map
     tipoMural: string;
 
+    /*
     constructor (id: number, idName: string, title: string, imgs: string[], description: string, data: string, location: string, tipoMural: string) {
         this.id = id;
         this.idName = idName;
@@ -18,7 +19,7 @@ export class Mural {
         this.data = data;
         this.location = location;
         this.tipoMural = tipoMural;
-    }
+    }*/
 }
 
 /*

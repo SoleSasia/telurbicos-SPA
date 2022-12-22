@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Mural } from 'src/app/models/mural';
+import { SanityService } from 'src/app/servicios/sanity.service';
 
 @Component({
   selector: 'app-telurbicos',
@@ -8,11 +9,11 @@ import { Mural } from 'src/app/models/mural';
 })
 
 export class TelurbicosComponent implements OnInit {
-
+/*
   //TODO: crear servicio JSON
   muralesTelurbicos: Mural[] = [
     {
-      id: 1,
+      _id: 1,
       idName: "DestrezaWaxa",
       title: "Destreza Waxa",
       imgs: ["./assets/bg-telurbicos.jpg","./assets/bg-homenajes.jpg","./assets/bg-telurbicos.jpg"],
@@ -22,7 +23,7 @@ export class TelurbicosComponent implements OnInit {
       tipoMural: "telurbicos"
     },
     {
-      id: 2,
+      _id: 2,
       idName: "Waxingona",
       title: "Waxingona",
       imgs: ["./assets/bg-otros.jpg","./assets/bg-homenajes.jpg","./assets/bg-otros.jpg"],
@@ -32,10 +33,24 @@ export class TelurbicosComponent implements OnInit {
       tipoMural: "telurbicos"
     }
   ];
+*/
+  constructor(private sanityService: SanityService) { }
 
-  constructor() { }
+  muralesTelurbicos: Mural[] = [];
+
+  /*
+  //no entiendo qué es esto
+  imageUrl(source: any) {
+    return this.sanityService.urlFor(source);
+  }
+  */
 
   ngOnInit(): void {
+    this.getMurales();
   }
 
+  async getMurales(): Promise<Mural[]>  {
+    this.muralesTelurbicos = await this.sanityService.getMurales();
+    return this.muralesTelurbicos;
+  }
 }

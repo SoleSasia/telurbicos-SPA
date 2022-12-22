@@ -11,7 +11,7 @@ export class HomenajesComponent implements OnInit {
 //TODO: crear servicio JSON
 muralesHomenajes: Mural[] = [
   {
-    id: 1,
+    _id: 1,
     idName: "DestrezaWaxa",
     title: "Destreza Waxa",
     imgs: ["./assets/bg-telurbicos.jpg","./assets/bg-homenajes.jpg","./assets/bg-telurbicos.jpg"],
@@ -21,7 +21,7 @@ muralesHomenajes: Mural[] = [
     tipoMural: "telurbicos"
   },
   {
-    id: 2,
+    _id: 2,
     idName: "Waxingona",
     title: "Waxingona",
     imgs: ["./assets/bg-otros.jpg","./assets/bg-homenajes.jpg","./assets/bg-otros.jpg"],
