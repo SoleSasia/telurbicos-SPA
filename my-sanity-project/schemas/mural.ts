@@ -16,8 +16,9 @@ export default {
         },
         {
             name: 'imgs',
-            type: 'string',
-            title: 'Imgs'
+            type: 'array',
+            title: 'Imagenes',
+            of: [{type: 'image'}]
         },
         {
             name: 'description',

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import sanityClient, { SanityClient } from '@sanity/client';
-//import imageUrlBuilder from "@sanity/image-url";
+import sanityClient from '@sanity/client';
+import imageUrlBuilder from "@sanity/image-url";
 import { Mural } from '../models/mural';
 
 @Injectable({
@@ -15,16 +15,18 @@ export class SanityService {
   sanityClientCredentials = {
     option: sanityClient({
       projectId: "ns024ktf", //TODO: usar environments 'YOUR_PROJECT_ID'
-      dataset: "production"
+      dataset: "production",
+      apiVersion: '2022-12-28',
+      useCdn: true,
     })
   }
-/*
+
   //no entiendo qué es esto
   urlFor = (source: any) =>
   imageUrlBuilder(this.sanityClientCredentials.option).image(source);
-  */
+  
 
-  //método asincrónico - solicitud GROQ para recuperar lista de películas
+  //método asincrónico - solicitud GROQ para recuperar lista de murales
   async getMurales(): Promise<Mural[]> {
     return await this.sanityClientCredentials.option.fetch(
       `*[_type == "mural"]{
@@ -41,8 +43,3 @@ export class SanityService {
   }
 
 }
-
-function imageUrlBuilder(option: SanityClient) {
-  throw new Error('Function not implemented.');
-}
-

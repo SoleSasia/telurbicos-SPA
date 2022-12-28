@@ -21,7 +21,6 @@ export interface Mural {
         this.tipoMural = tipoMural;
     }*/
 }
-
 /*
 export class TipoMural {
    
