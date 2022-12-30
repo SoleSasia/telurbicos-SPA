@@ -38,8 +38,6 @@ export class TelurbicosComponent implements OnInit {
 
   muralesTelurbicos: Mural[] = [];
 
-  
-  //no entiendo qué es esto
   imageUrl(source: any) {
     return this.sanityService.urlFor(source);
   }

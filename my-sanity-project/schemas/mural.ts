@@ -5,14 +5,45 @@ export default {
     title: 'Mural',
     fields: [
         {
-            name: 'idName',
-            type: 'string',
-            title: 'Id_Name'
-        },
-        {
             name: 'title',
             type: 'string',
-            title: 'Title'
+            title: 'Título'
+        },
+        {
+            name: 'idName',
+            type: 'string',
+            title: 'Nombre Identificador',
+            description: 'Colocar el título sin espacios'
+        },
+        {
+            name: 'location',
+            type: 'string',
+            title: 'Ubicación',
+            description: 'Url de google maps'
+        },
+        {
+            name: 'description', //ver si es necesario establacer validación de longitud máxima
+            type: 'string',
+            title: 'Descripción',
+            description: 'Breve descripción del mural'
+        },
+        {
+            name: 'data',
+            type: 'string',//cambiar a date para mostrar mes
+            title: 'Mes y año de realización'
+        },
+        {
+            name: 'tipoMural',
+            type: 'string',
+            title: 'Tipo de Mural',
+            description: 'Seleccionar entre los disponibles (este campo no puede ir vacío)',
+            options: {
+                list: [
+                  {title: 'Telúrbicos', value: 'telurbicos'},
+                  {title: 'Homenajes', value: 'homenajes'},
+                  {title: 'Otros', value: 'otros'}
+                ]
+            }
         },
         {
             name: 'imgs',
@@ -20,25 +51,5 @@ export default {
             title: 'Imagenes',
             of: [{type: 'image'}]
         },
-        {
-            name: 'description',
-            type: 'string',
-            title: 'Description'
-        },
-        {
-            name: 'data',
-            type: 'string',
-            title: 'Data'
-        },
-        {
-            name: 'location',
-            type: 'string',
-            title: 'Location'
-        },
-        {
-            name: 'tipoMural',
-            type: 'string',
-            title: 'Tipo_Mural'
-        }
     ]
 }

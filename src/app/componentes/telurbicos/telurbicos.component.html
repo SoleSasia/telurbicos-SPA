@@ -35,16 +35,11 @@
       </div>
 
       <div class="mural-description">
-        <h6 class="py-1"></h6>
-        <p>{{mural.title}}
-          <br>
-          {{mural.description}}
-          <br>
-          <small><em>{{mural.data}}</em></small>
-          <br>
-          <a href="https://www.google.com/maps/place/Puente+Nicol%C3%A1s+Avellaneda/@-31.4060228,-64.1980815,17z/data=!4m5!3m4!1s0x9432987d73a9fd1b:0x8cb5a76a75756d81!8m2!3d-31.4060229!4d-64.1938543?hl=es-419" target="_blank" rel="noopener noreferrer">
-            <i class="fa-solid fa-location-dot fs-4 me-1"></i>
-            <span>{{mural.location}}</span>
+        <h3 class="mb-1 mt-2 fs-6 fw-bold text-uppercase">{{mural.title}}</h3>
+        <p>{{mural.description}}<br>
+          {{mural.data}}<br>
+          <a [href]="mural.location" target="_blank" aria-label="link al mapa">
+            <i class="fa-solid fa-location-dot fs-4 me-1"></i>Ir al mapa
           </a>
         </p>
       </div>
