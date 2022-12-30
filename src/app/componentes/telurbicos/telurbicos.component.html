@@ -5,8 +5,8 @@
     
     <div *ngFor="let mural of muralesTelurbicos" class="mural-section container-fluid py-3">
   
-      <!--attribute binding en id & data-bs-target resuelve el uso de múltiples carruseles en single page
-          data-bs-ride=false evita desplazamiento automático-->
+      <!--attribute binding en id [attr.id] & data-bs-target [attr.data-bs-target] resuelve el uso de múltiples carruseles 
+        en single page. data-bs-ride=false evita desplazamiento automático-->
       <div [attr.id]="mural.idName" class="carousel slide" data-bs-ride="false" data-bs-keyboard="true">
           
         <div class="carousel-indicators">
@@ -35,10 +35,18 @@
       </div>
 
       <div class="mural-description">
-        <h6 class="py-1">{{mural.title}}</h6>
-        <p>{{mural.description}}<br>
-        {{mural.location}}<br>
-        <small><em>{{mural.data}}</em></small></p>
+        <h6 class="py-1"></h6>
+        <p>{{mural.title}}
+          <br>
+          {{mural.description}}
+          <br>
+          <small><em>{{mural.data}}</em></small>
+          <br>
+          <a href="https://www.google.com/maps/place/Puente+Nicol%C3%A1s+Avellaneda/@-31.4060228,-64.1980815,17z/data=!4m5!3m4!1s0x9432987d73a9fd1b:0x8cb5a76a75756d81!8m2!3d-31.4060229!4d-64.1938543?hl=es-419" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-location-dot fs-4 me-1"></i>
+            <span>{{mural.location}}</span>
+          </a>
+        </p>
       </div>
       
     </div>

@@ -21,7 +21,7 @@ export class SanityService {
     })
   }
 
-  //no entiendo qué es esto
+  //función que permite traer la url del recurso alo
   urlFor = (source: any) =>
   imageUrlBuilder(this.sanityClientCredentials.option).image(source);
   
