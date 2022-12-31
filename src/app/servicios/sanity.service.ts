@@ -30,14 +30,13 @@ export class SanityService {
   async getMurales(): Promise<Mural[]> {
     return await this.sanityClientCredentials.option.fetch(
       `*[_type == "mural"]{
-        _id,
-        idName,
         title,
-        imgs,
+        idName,
+        location,
         description,
         data,
-        location,
         tipoMural,
+        imgs,
       }`
     );
   }
