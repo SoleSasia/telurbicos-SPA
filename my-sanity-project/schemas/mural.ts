@@ -28,9 +28,13 @@ export default {
             description: 'Breve descripción del mural'
         },
         {
-            name: 'data',
-            type: 'string',//cambiar a date para mostrar mes
-            title: 'Mes y año de realización'
+            name: 'paintingDate',
+            type: 'date',//cambiar a date para mostrar mes
+            title: 'Fecha de realización',
+            description: 'Mes y año',
+           /* options: {
+                dateFormat: 'MMMM YYYY',
+              }*/
         },
         {
             name: 'tipoMural',
