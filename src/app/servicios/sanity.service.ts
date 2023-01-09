@@ -21,7 +21,7 @@ export class SanityService {
     })
   }
 
-  //función que permite traer la url del recurso alo
+  //función que permite traer la url de la imagen alojada en Sanity
   urlFor = (source: any) =>
   imageUrlBuilder(this.sanityClientCredentials.option).image(source);
   
@@ -34,8 +34,36 @@ export class SanityService {
         idName,
         location,
         description,
-        data,
-        tipoMural,
+        paintingDate,
+        muralTypes,
+        imgs,
+      }`
+    );
+  }
+
+  async getTelurbicos(): Promise<Mural[]> {
+    return await this.sanityClientCredentials.option.fetch(
+      `*[_type == "mural" && muralTypes == "telurbicos"]{
+        title,
+        idName,
+        location,
+        description,
+        paintingDate,
+        muralTypes,
+        imgs,
+      }`
+    );
+  }
+
+  async getHomenajes(): Promise<Mural[]> {
+    return await this.sanityClientCredentials.option.fetch(
+      `*[_type == "mural" && muralTypes == "homenajes"]{
+        title,
+        idName,
+        location,
+        description,
+        paintingDate,
+        muralTypes,
         imgs,
       }`
     );

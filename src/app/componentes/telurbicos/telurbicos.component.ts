@@ -44,7 +44,12 @@ export class TelurbicosComponent implements OnInit {
   
 
   ngOnInit(): void {
-    this.getMurales();
+    this.getTelurbicos();
+  }
+
+  async getTelurbicos(): Promise<Mural[]>  {
+    this.muralesTelurbicos = await this.sanityService.getTelurbicos();
+    return this.muralesTelurbicos;
   }
 
   async getMurales(): Promise<Mural[]>  {

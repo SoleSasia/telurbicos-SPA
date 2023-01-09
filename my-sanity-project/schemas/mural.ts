@@ -28,12 +28,16 @@ export default {
             description: 'Breve descripción del mural'
         },
         {
-            name: 'data',
-            type: 'string',//cambiar a date para mostrar mes
-            title: 'Mes y año de realización'
+            name: 'paintingDate',
+            type: 'date',//cambiar a date para mostrar mes
+            title: 'Fecha de realización',
+            description: 'Mes y año',
+           /* options: {
+                dateFormat: 'MMMM YYYY',
+              }*/
         },
         {
-            name: 'tipoMural',
+            name: 'muralTypes',
             type: 'string',
             title: 'Tipo de Mural',
             description: 'Seleccionar entre los disponibles (este campo no puede ir vacío)',
@@ -51,5 +55,35 @@ export default {
             title: 'Imagenes',
             of: [{type: 'image'}]
         },
+    ],
+    orderings: [
+        {
+          title: 'De nuevo a viejo',
+          name: 'paintingDateDesc',
+          by: [
+            {field: 'paintingDate', direction: 'desc'}
+          ]
+        },
+        {
+          title: 'De viejo a nuevo',
+          name: 'paintingDateAsc',
+          by: [
+            {field: 'paintingDate', direction: 'asc'}
+          ]
+        },
+        {
+          title: 'Tipo de Mural',
+          name: 'muralTypesAsc',
+          by: [
+            {field: 'muralTypes', direction: 'asc'}
+          ]
+        },
+        {
+          title: 'Alfabéticamente',
+          name: 'titleAsc',
+          by: [
+            {field: 'title', direction: 'asc'}
+          ]
+        }
     ]
 }

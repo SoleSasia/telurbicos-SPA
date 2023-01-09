@@ -7,7 +7,7 @@ import { Mural } from 'src/app/models/mural';
   styleUrls: ['./otros.component.css']
 })
 export class OtrosComponent implements OnInit {
-
+/*
   //TODO: crear servicio JSON
   muralesOtros: Mural[] = [
     {
@@ -15,8 +15,8 @@ export class OtrosComponent implements OnInit {
       title: "Destreza Waxa",
       imgs: ["./assets/bg-telurbicos.jpg","./assets/bg-homenajes.jpg","./assets/bg-telurbicos.jpg"],
       description: "Primer mural telúrbico copado",
-      data: "setiembre 2021",
-      location: "Costanera Norte, Córdoba Capital",
+      paintingDate: "seti",
+      location: "Costanera Note, Córdoba Capital",
       tipoMural: "telurbicos"
     },
     {
@@ -24,11 +24,13 @@ export class OtrosComponent implements OnInit {
       title: "Waxingona",
       imgs: ["./assets/bg-otros.jpg","./assets/bg-homenajes.jpg","./assets/bg-otros.jpg"],
       description: "mural copado",
-      data: "diciembre 2021",
+      paintingDate: "diciembre 2021",
       location: "...",
       tipoMural: "telurbicos"
     }
   ];
+  */
+  muralesOtros: Mural[] = [];
 
   constructor() { }
 

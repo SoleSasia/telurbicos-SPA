@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Mural } from 'src/app/models/mural';
+import { SanityService } from 'src/app/servicios/sanity.service';
 
 @Component({
   selector: 'app-homenajes',
@@ -7,7 +8,8 @@ import { Mural } from 'src/app/models/mural';
   styleUrls: ['./homenajes.component.css']
 })
 export class HomenajesComponent implements OnInit {
-
+  
+  /*
 //TODO: crear servicio JSON
 muralesHomenajes: Mural[] = [
   {
@@ -15,7 +17,7 @@ muralesHomenajes: Mural[] = [
     title: "Destreza Waxa",
     imgs: ["./assets/bg-telurbicos.jpg","./assets/bg-homenajes.jpg","./assets/bg-telurbicos.jpg"],
     description: "Primer mural telúrbico copado",
-    data: "setiembre 2021",
+    paintingData: "setiembre 2021",
     location: "Costanera Norte, Córdoba Capital",
     tipoMural: "telurbicos"
   },
@@ -24,15 +26,28 @@ muralesHomenajes: Mural[] = [
     title: "Waxingona",
     imgs: ["./assets/bg-otros.jpg","./assets/bg-homenajes.jpg","./assets/bg-otros.jpg"],
     description: "mural copado",
-    data: "diciembre 2021",
+    paintingData: "diciembre 2021",
     location: "...",
     tipoMural: "telurbicos"
   }
 ];
+*/
+constructor(private sanityService: SanityService) { }
 
-  constructor() { }
+muralesHomenajes: Mural[] = [];
 
-  ngOnInit(): void {
-  }
+imageUrl(source: any) {
+  return this.sanityService.urlFor(source);
+}
+
+
+ngOnInit(): void {
+  this.getHomenajes();
+}
+
+async getHomenajes(): Promise<Mural[]>  {
+  this.muralesHomenajes = await this.sanityService.getHomenajes();
+  return this.muralesHomenajes;
+}
 
 }
