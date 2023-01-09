@@ -35,7 +35,7 @@ export class SanityService {
         location,
         description,
         paintingDate,
-        tipoMural,
+        muralTypes,
         imgs,
       }`
     );
@@ -48,8 +48,8 @@ export class SanityService {
         idName,
         location,
         description,
-        data,
-        tipoMural,
+        paintingDate,
+        muralTypes,
         imgs,
       }`
     );
