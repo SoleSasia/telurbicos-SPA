@@ -55,4 +55,18 @@ export class SanityService {
     );
   }
 
+  async getHomenajes(): Promise<Mural[]> {
+    return await this.sanityClientCredentials.option.fetch(
+      `*[_type == "mural" && muralTypes == "homenajes"]{
+        title,
+        idName,
+        location,
+        description,
+        paintingDate,
+        muralTypes,
+        imgs,
+      }`
+    );
+  }
+
 }

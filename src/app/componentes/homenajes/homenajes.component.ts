@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Mural } from 'src/app/models/mural';
+import { SanityService } from 'src/app/servicios/sanity.service';
 
 @Component({
   selector: 'app-homenajes',
@@ -31,11 +32,22 @@ muralesHomenajes: Mural[] = [
   }
 ];
 */
-  muralesHomenajes: Mural[] = [];
+constructor(private sanityService: SanityService) { }
 
-  constructor() { }
+muralesHomenajes: Mural[] = [];
 
-  ngOnInit(): void {
-  }
+imageUrl(source: any) {
+  return this.sanityService.urlFor(source);
+}
+
+
+ngOnInit(): void {
+  this.getHomenajes();
+}
+
+async getHomenajes(): Promise<Mural[]>  {
+  this.muralesHomenajes = await this.sanityService.getHomenajes();
+  return this.muralesHomenajes;
+}
 
 }
