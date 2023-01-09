@@ -18,7 +18,7 @@
         <div  class="carousel-inner">
           <div *ngFor="let img of mural.imgs, let i=index">
             <div class="carousel-item" [ngClass]="(i === 0) ? 'active' : ''">
-              <img [src]="imageUrl(img)" class="d-block w-100" [attr.alt]="mural.title">
+              <img [src]="imageUrl(img)+'?auto=format'" class="d-block w-100" [attr.alt]="mural.title">
             </div>
           </div>
     
@@ -36,8 +36,8 @@
 
       <div class="mural-description">
         <h3 class="mb-1 mt-2 fs-6 fw-bold text-uppercase">{{mural.title}}</h3>
-        <p>{{mural.description}}<br>
-          {{mural.paintingDate | date:"MM | YYYY"}}<br>
+        <p>{{mural.paintingDate | date:"MM | YYYY"}}<br>
+          {{mural.description}}<br>
           <a [href]="mural.location" target="_blank" aria-label="link al mapa">
             <i class="fa-solid fa-location-dot fs-4 me-1"></i>Ir al mapa
           </a>
