@@ -43,7 +43,7 @@ export class SanityService {
 
   async getTelurbicos(): Promise<Mural[]> {
     return await this.sanityClientCredentials.option.fetch(
-      `*[_type == "mural"]{
+      `*[_type == "mural" && muralTypes == "telurbicos"]{
         title,
         idName,
         location,
